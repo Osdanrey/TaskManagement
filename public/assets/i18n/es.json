@@ -1,0 +1,305 @@
+{
+  "TASKS": {
+    "TITLE": "Mis Tareas",
+    "NEW_TASK": "Nueva Tarea",
+    "SEARCH_PLACEHOLDER": "Buscar tareas por título o descripción...",
+    "PRIORITIES": {
+      "ALL": "Todas las Prioridades",
+      "HIGH": "Solo Altas",
+      "MEDIUM": "Solo Medias",
+      "LOW": "Solo Bajas"
+    },
+    "SORT": {
+      "DEADLINE": "Por Fecha Límite",
+      "CREATED_AT": "Por Fecha de Creación",
+      "PRIORITY": "Por Prioridad",
+      "ASC": "Ascendente",
+      "DESC": "Descendente"
+    },
+    "STATUS": {
+      "LOADING": "Cargando tus tareas...",
+      "ERROR": "Algo salió mal",
+      "TRY_AGAIN": "Intentar de nuevo",
+      "ONGOING": "Tareas en Curso",
+      "COMPLETED": "Tareas Completadas",
+      "NO_ONGOING": "No se encontraron tareas en curso.",
+      "NO_COMPLETED": "Aún no hay tareas completadas.",
+      "COMPLETED_DESC": "Las tareas que completes aparecerán aquí.",
+      "CREATE_NEW": "Crear una nueva tarea"
+    },
+    "PAGINATION": {
+      "PREVIOUS": "Anterior",
+      "NEXT": "Siguiente",
+      "PAGE_OF": "Página {{ current }} de {{ total }}"
+    },
+    "SUBTASK_PROGRESS": "{{ completed }}/{{ total }} subtareas",
+    "PRIORITY_LEVELS": {
+      "High": "Alta",
+      "Medium": "Media",
+      "Low": "Baja"
+    },
+    "ALERTS": {
+      "OVERDUE": "Atrasado",
+      "DUE_IN_HM": "Vence en {{ hours }}h {{ mins }}m",
+      "DUE_IN_DAYS": "Vence en {{ days }}d",
+      "ON_TRACK": "En marcha"
+    },
+    "DETAIL": {
+      "BACK": "Volver a Tareas",
+      "BACK_TO_TASK": "Volver a la Tarea",
+      "LOADING": "Cargando detalles de la tarea...",
+      "ERROR": "Algo salió mal",
+      "GO_BACK": "Ir atrás",
+      "PRIORITY": "Prioridad",
+      "COMPLETED": "Completada",
+      "IN_PROGRESS": "En Progreso",
+      "DESCRIPTION": "Descripción",
+      "NO_DESCRIPTION": "No se proporcionó descripción",
+      "SUBTASKS_TITLE": "Lista de Subtareas",
+      "SUBTASKS_COMPLETED": "{{ completed }}/{{ total }} COMPLETADAS",
+      "NO_SUBTASKS": "No se han añadido subtareas para esta tarea.",
+      "MARK_COMPLETE": "Marcar como Completada",
+      "UPDATING": "Actualizando...",
+      "EDIT": "Editar Tarea",
+      "DELETE": "Eliminar Tarea",
+      "DELETING": "Eliminando...",
+      "CONFIRM_DELETE": "¿Estás seguro de que quieres eliminar esta tarea?",
+      "HISTORY_TITLE": "Historial y Registro de Auditoría",
+      "NO_ACTIVITY": "Aún no hay actividad registrada",
+      "UNASSIGNED": "Sin asignar"
+    },
+    "FORM": {
+      "CREATE_TITLE": "Crear Nueva Tarea",
+      "EDIT_TITLE": "Editar Tarea",
+      "CREATE_SUBTITLE": "Completa los detalles a continuación para crear una tarea",
+      "EDIT_SUBTITLE": "Actualiza los detalles a continuación para esta tarea",
+      "LABEL_TITLE": "Título de la Tarea",
+      "PLACEHOLDER_TITLE": "Ingresa un título descriptivo",
+      "LABEL_DESCRIPTION": "Descripción",
+      "PLACEHOLDER_DESCRIPTION": "Proporciona una descripción detallada de la tarea",
+      "LABEL_DEADLINE": "Fecha Límite",
+      "LABEL_PRIORITY": "Prioridad",
+      "PLACEHOLDER_PRIORITY": "Seleccionar prioridad",
+      "LABEL_ASSIGNEE": "Asignar a",
+      "PLACEHOLDER_ASSIGNEE": "Seleccionar usuario",
+      "SUBTASKS_LABEL": "Subtareas / Lista de verificación",
+      "ADD_SUBTASK": "AÑADIR NUEVA",
+      "NO_SUBTASKS": "Aún no hay subtareas añadidas.",
+      "PLACEHOLDER_SUBTASK": "¿Qué hay que hacer?",
+      "SUBMIT_CREATE": "Crear Tarea",
+      "SUBMIT_UPDATE": "Actualizar Tarea",
+      "ERRORS": {
+        "TITLE_REQUIRED": "El título es obligatorio",
+        "TITLE_MINLENGTH": "El título debe tener al menos 3 caracteres",
+        "DESCRIPTION_REQUIRED": "La descripción es obligatoria",
+        "DESCRIPTION_MINLENGTH": "La descripción debe tener al menos 3 caracteres",
+        "DEADLINE_REQUIRED": "La fecha límite es obligatoria",
+        "PRIORITY_REQUIRED": "La prioridad es obligatoria",
+        "ASSIGNEE_REQUIRED": "El asignado es obligatorio"
+      }
+    }
+  },
+  "HOME": {
+    "TITLE": "Simplifica tu Gestión de Tareas",
+    "SUBTITLE": "Rastrea, organiza y completa tus tareas eficientemente con nuestra plataforma fácil de usar.",
+    "LOG_IN": "Iniciar Sesión",
+    "SIGN_UP": "Registrarse",
+    "FEATURES": {
+      "EASY": "Fácil organización de tareas",
+      "PRIORITY": "Gestión de prioridades",
+      "USER": "Asignación de usuarios",
+      "DEADLINE": "Seguimiento de fechas límite"
+    },
+    "HOW_IT_WORKS": {
+      "TITLE": "Cómo Funciona",
+      "CREATE": {
+        "TITLE": "Crea Tareas",
+        "DESC": "Añade nuevas tareas con títulos, descripciones, fechas límite y niveles de prioridad."
+      },
+      "TRACK": {
+        "TITLE": "Sigue el Progreso",
+        "DESC": "Monitorea tareas en curso y completadas con un tablero intuitivo."
+      },
+      "COMPLETE": {
+        "TITLE": "Completa Tareas",
+        "DESC": "Marca tareas como completadas y mantén un registro de tus logros."
+      }
+    }
+  },
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "Bienvenido de Nuevo",
+      "SUBTITLE": "Inicia sesión en tu cuenta para continuar",
+      "EMAIL": "Correo Electrónico",
+      "EMAIL_PLACEHOLDER": "tu@ejemplo.com",
+      "PASSWORD": "Contraseña",
+      "LABEL_PASSWORD": "Contraseña",
+      "FORGOT_PASSWORD": "¿Olvidaste tu contraseña?",
+      "SUBMIT": "Iniciar Sesión",
+      "NO_ACCOUNT": "¿No tienes una cuenta?",
+      "SIGN_UP_NOW": "Crear Cuenta",
+      "SUCCESS_MSG": "¡Bienvenido de nuevo! Has iniciado sesión con éxito.",
+      "SUCCESS_TITLE": "Inicio de Sesión Exitoso",
+      "ERROR_TITLE": "Error al Iniciar Sesión",
+      "ERRORS": {
+        "EMAIL_REQUIRED": "El correo es obligatorio",
+        "EMAIL_INVALID": "Formato de correo inválido",
+        "PASSWORD_REQUIRED": "La contraseña es obligatoria",
+        "PASSWORD_MINLENGTH": "La contraseña debe tener al menos 6 caracteres",
+        "INVALID_CREDENTIALS": "Credenciales inválidas. Por favor, inténtalo de nuevo.",
+        "PASSWORD_MIN": "La contraseña debe tener al menos 6 caracteres",
+        "ORG_REQUIRED": "El nombre de la organización es obligatorio para administradores"
+      }
+    },
+    "FORGOT_PW": {
+      "TITLE": "Restablecer tu Contraseña",
+      "SUBTITLE": "Ingresa tu correo electrónico y te enviaremos un enlace para restablecer tu contraseña.",
+      "LABEL_EMAIL": "Correo Electrónico",
+      "ERROR_EMAIL": "Se requiere un correo válido",
+      "SUBMIT": "Enviar Enlace",
+      "BACK": "Volver al Inicio de Sesión"
+    },
+    "RESET_PW": {
+      "TITLE": "Crear Nueva Contraseña",
+      "SUBTITLE": "Tu nueva contraseña debe ser diferente de las contraseñas usadas anteriormente.",
+      "LABEL_NEW": "Nueva Contraseña",
+      "LABEL_CONFIRM": "Confirmar Contraseña",
+      "ERROR_CONFIRM": "Se requiere confirmar la contraseña",
+      "ERROR_MATCH": "Las contraseñas no coinciden",
+      "SUBMIT": "Restablecer Contraseña"
+    }
+  },
+  "NAV": {
+    "TOGGLE_LANG": "Cambiar Idioma",
+    "DASHBOARD": "Tablero",
+    "MY_TASKS": "Mis Tareas",
+    "PROFILE": "Perfil",
+    "ORGANIZATIONS": "Organizaciones",
+    "USERS": "Usuarios",
+    "NEW_TASK": "Nueva Tarea",
+    "LOGOUT": "Cerrar Sesión",
+    "LOGIN": "Iniciar Sesión",
+    "SIGN_UP": "Registrarse",
+    "HOME": "Inicio"
+  },
+  "FOOTER": {
+    "DESC": "Una aplicación simple pero poderosa para gestionar tus tareas de manera eficiente. Construida con Angular, Node.js, Express y MongoDB.",
+    "QUICK_LINKS": "Enlaces Rápidos",
+    "CONNECT": "Conectar",
+    "RIGHTS": "Todos los derechos reservados.",
+    "CREATED_BY": "Creado por",
+    "LOADING_VISITORS": "Cargando contador...",
+    "UNIQUE_VISITORS": "Visitantes Únicos"
+  },
+  "DASHBOARD": {
+    "TITLE": "Tablero Ejecutivo",
+    "SUBTITLE": "Resumen Organizacional y Progreso",
+    "UNAVAILABLE": "Tablero no disponible",
+    "STATS": {
+      "TOTAL": "Total de Tareas",
+      "COMPLETED": "Finalizadas",
+      "URGENT": "Urgentes",
+      "IN_QUEUE": "En Cola",
+      "ACTIVE_LABEL": "+Activas",
+      "CRITICAL_LABEL": "Críticas"
+    },
+    "DISTRIBUTION": {
+      "TITLE": "Distribución de Tareas",
+      "OVERALL_PROGRESS": "Progreso General"
+    },
+    "WORKSPACE": {
+      "TITLE": "Ir al Espacio de Trabajo",
+      "DESC": "Accede a tus listas de tareas y comienza a colaborar con tu equipo hoy.",
+      "VIEW_ALL": "VER TODAS LAS TAREAS"
+    },
+    "SYSTEM_OVERVIEW": "Resumen del Sistema"
+  },
+  "USERS": {
+    "TITLE": "Gestión de Usuarios",
+    "SUBTITLE": "Ver y gestionar todos los usuarios en tu organización.",
+    "LOADING": "Cargando usuarios...",
+    "EMPTY": {
+      "TITLE": "No se encontraron usuarios",
+      "DESC": "No hay usuarios para mostrar en este momento."
+    },
+    "LIST_HEADER": "Usuarios Registrados",
+    "PAGINATION": {
+      "PAGE_OF": "Mostrando página {{page}} de {{total}}",
+      "SHOWING_RANGE": "Mostrando {{start}}-{{end}} de {{total}} usuarios",
+      "PREVIOUS": "Anterior",
+      "NEXT": "Siguiente"
+    },
+    "TABLE": {
+      "NAME": "Nombre",
+      "EMAIL": "Correo",
+      "ROLE": "Rol",
+      "JOIN_DATE": "Fecha de Unión",
+      "ORGANIZATION": "Organización"
+    }
+  },
+  "PROFILE": {
+    "TITLE": "Mi Perfil",
+    "SUBTITLE": "Gestiona tu información personal y ajustes de cuenta.",
+    "FIELDS": {
+      "NAME": "Nombre Completo",
+      "EMAIL": "Correo Electrónico",
+      "POSITION": "Cargo",
+      "ORGANIZATION": "Organización",
+      "CREATED_AT": "Cuenta Creada"
+    },
+    "LATEST_ACTIVITY": "Últimas Actividades",
+    "UPDATE_BTN": "Actualizar Perfil"
+  },
+  "ORGANIZATIONS": {
+    "TITLE": "Mis Organizaciones",
+    "LOADING": "Cargando organizaciones...",
+    "EMPTY": {
+      "TITLE": "No se encontraron organizaciones",
+      "DESC": "Crea tu primera organización para comenzar.",
+      "BTN": "Crear Organización"
+    },
+    "LIST": {
+      "MEMBERS": "{{count}} miembros",
+      "NO_DESC": "Sin descripción",
+      "CREATED_BY": "Creado por",
+      "VIEW_DETAILS": "Ver Detalles"
+    },
+    "PAGINATION": {
+      "SHOWING": "Mostrando {{start}}-{{end}} de {{total}} organizaciones",
+      "PREV": "Anterior",
+      "NEXT": "Siguiente"
+    },
+    "FORM": {
+      "BACK": "Volver a Organizaciones",
+      "CREATE_TITLE": "Crear Nueva Organización",
+      "EDIT_TITLE": "Editar Organización",
+      "LABEL_NAME": "Nombre de la Organización",
+      "LABEL_DESC": "Descripción",
+      "LABEL_LOGO": "URL del Logo",
+      "PLACEHOLDER_DESC": "Describe tu organización (opcional)",
+      "PLACEHOLDER_LOGO": "https://ejemplo.com/logo.png (opcional)",
+      "SUBMIT_CREATE": "Crear Organización",
+      "SUBMIT_CREATING": "Creando...",
+      "SUBMIT_EDIT": "Guardar Cambios",
+      "ERRORS": {
+        "NAME_REQUIRED": "El nombre es obligatorio",
+        "NAME_MIN": "El nombre debe tener al menos 3 caracteres"
+      }
+    },
+    "DETAIL": {
+      "TITLE": "Detalles de la Organización",
+      "LOADING": "Cargando detalles de la organización...",
+      "MEMBERS_TITLE": "Miembros",
+      "ROLE": "Rol",
+      "JOINED": "Unido",
+      "EDIT": "Editar",
+      "CANCEL_EDIT": "Cancelar Edición",
+      "SAVE": "Guardar Cambios",
+      "ADD_MEMBER": "Agregar Miembro",
+      "SELECT_USER": "Seleccionar Usuario",
+      "SELECT_USER_OPT": "-- Selecciona un Usuario --",
+      "NO_USERS": "No hay usuarios disponibles para agregar",
+      "CANCEL": "Cancelar"
+    }
+  }
+}

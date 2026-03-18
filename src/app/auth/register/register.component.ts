@@ -11,10 +11,12 @@ import { Router, RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { OrganizationService } from '../../services/organization.service';
 import { Organization } from '../../core/models/organization.model';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-register',
-    imports: [ReactiveFormsModule, RouterLink, NgClass],
+    standalone: true,
+    imports: [ReactiveFormsModule, RouterLink, NgClass, TranslateModule],
     templateUrl: './register.component.html',
 })
 export class RegisterComponent implements OnInit {

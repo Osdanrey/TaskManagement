@@ -7,10 +7,11 @@ import { AuthService } from '../../../services/auth.service';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { UsersService } from '../../../services/users.service';
 import { User } from '../../../core/models/users.model';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-organization-detail',
-  imports: [RouterLink, NgClass, DatePipe, ReactiveFormsModule],
+  imports: [RouterLink, NgClass, DatePipe, ReactiveFormsModule, TranslateModule],
   templateUrl: './organization-detail.component.html'
 })
 export class OrganizationDetailComponent implements OnInit {

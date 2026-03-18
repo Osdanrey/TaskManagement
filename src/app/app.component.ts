@@ -6,6 +6,7 @@ import { Meta } from '@angular/platform-browser';
 import { TrackService } from './services/track.service';
 import { Visit } from './core/models/visit.model';
 import { ToastComponent } from './shared/toast/toast.component';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-root',

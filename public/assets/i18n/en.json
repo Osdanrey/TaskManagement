@@ -1,0 +1,305 @@
+{
+  "TASKS": {
+    "TITLE": "My Tasks",
+    "NEW_TASK": "New Task",
+    "SEARCH_PLACEHOLDER": "Search tasks by title or description...",
+    "PRIORITIES": {
+      "ALL": "All Priorities",
+      "HIGH": "High Only",
+      "MEDIUM": "Medium Only",
+      "LOW": "Low Only"
+    },
+    "SORT": {
+      "DEADLINE": "By Deadline",
+      "CREATED_AT": "By Created Date",
+      "PRIORITY": "By Priority",
+      "ASC": "Ascending",
+      "DESC": "Descending"
+    },
+    "STATUS": {
+      "LOADING": "Loading your tasks...",
+      "ERROR": "Something went wrong",
+      "TRY_AGAIN": "Try again",
+      "ONGOING": "Ongoing Tasks",
+      "COMPLETED": "Completed Tasks",
+      "NO_ONGOING": "No ongoing tasks found.",
+      "NO_COMPLETED": "No completed tasks yet.",
+      "COMPLETED_DESC": "Tasks you complete will appear here.",
+      "CREATE_NEW": "Create a new task"
+    },
+    "PAGINATION": {
+      "PREVIOUS": "Previous",
+      "NEXT": "Next",
+      "PAGE_OF": "Page {{ current }} of {{ total }}"
+    },
+    "SUBTASK_PROGRESS": "{{ completed }}/{{ total }} subtasks",
+    "PRIORITY_LEVELS": {
+      "High": "High",
+      "Medium": "Medium",
+      "Low": "Low"
+    },
+    "ALERTS": {
+      "OVERDUE": "Overdue",
+      "DUE_IN_HM": "Due in {{ hours }}h {{ mins }}m",
+      "DUE_IN_DAYS": "Due in {{ days }}d",
+      "ON_TRACK": "On Track"
+    },
+    "DETAIL": {
+      "BACK": "Back to Tasks",
+      "BACK_TO_TASK": "Back to Task",
+      "LOADING": "Loading task details...",
+      "ERROR": "Something went wrong",
+      "GO_BACK": "Go back",
+      "PRIORITY": "Priority",
+      "COMPLETED": "Completed",
+      "IN_PROGRESS": "In Progress",
+      "DESCRIPTION": "Description",
+      "NO_DESCRIPTION": "No description provided",
+      "SUBTASKS_TITLE": "Subtasks Checklist",
+      "SUBTASKS_COMPLETED": "{{ completed }}/{{ total }} COMPLETED",
+      "NO_SUBTASKS": "No subtasks added for this task.",
+      "MARK_COMPLETE": "Mark as Complete",
+      "UPDATING": "Updating...",
+      "EDIT": "Edit Task",
+      "DELETE": "Delete Task",
+      "DELETING": "Deleting...",
+      "CONFIRM_DELETE": "Are you sure you want to delete this task?",
+      "HISTORY_TITLE": "Audit Trail & History",
+      "NO_ACTIVITY": "No activity logged yet",
+      "UNASSIGNED": "Unassigned"
+    },
+    "FORM": {
+      "CREATE_TITLE": "Create New Task",
+      "EDIT_TITLE": "Edit Task",
+      "CREATE_SUBTITLE": "Fill in the details below to create a task",
+      "EDIT_SUBTITLE": "Update the details below for this task",
+      "LABEL_TITLE": "Task Title",
+      "PLACEHOLDER_TITLE": "Enter a descriptive title",
+      "LABEL_DESCRIPTION": "Description",
+      "PLACEHOLDER_DESCRIPTION": "Provide a detailed description of the task",
+      "LABEL_DEADLINE": "Deadline",
+      "LABEL_PRIORITY": "Priority",
+      "PLACEHOLDER_PRIORITY": "Select priority",
+      "LABEL_ASSIGNEE": "Assign To",
+      "PLACEHOLDER_ASSIGNEE": "Select user",
+      "SUBTASKS_LABEL": "Subtasks / Checklist",
+      "ADD_SUBTASK": "ADD NEW",
+      "NO_SUBTASKS": "No subtasks added yet.",
+      "PLACEHOLDER_SUBTASK": "What needs to be done?",
+      "SUBMIT_CREATE": "Create Task",
+      "SUBMIT_UPDATE": "Update Task",
+      "ERRORS": {
+        "TITLE_REQUIRED": "Title is required",
+        "TITLE_MINLENGTH": "Title must be at least 3 characters",
+        "DESCRIPTION_REQUIRED": "Description is required",
+        "DESCRIPTION_MINLENGTH": "Description must be at least 3 characters",
+        "DEADLINE_REQUIRED": "Deadline is required",
+        "PRIORITY_REQUIRED": "Priority is required",
+        "ASSIGNEE_REQUIRED": "Assignee is required"
+      }
+    }
+  },
+  "HOME": {
+    "TITLE": "Simplify Your Task Management",
+    "SUBTITLE": "Track, organize, and complete your tasks efficiently with our user-friendly platform.",
+    "LOG_IN": "Log In",
+    "SIGN_UP": "Sign Up",
+    "FEATURES": {
+      "EASY": "Easy task organization",
+      "PRIORITY": "Priority management",
+      "USER": "User assignment",
+      "DEADLINE": "Deadline tracking"
+    },
+    "HOW_IT_WORKS": {
+      "TITLE": "How It Works",
+      "CREATE": {
+        "TITLE": "Create Tasks",
+        "DESC": "Add new tasks with titles, descriptions, deadlines, and priority levels."
+      },
+      "TRACK": {
+        "TITLE": "Track Progress",
+        "DESC": "Monitor ongoing and completed tasks with an intuitive dashboard."
+      },
+      "COMPLETE": {
+        "TITLE": "Complete Tasks",
+        "DESC": "Mark tasks as complete and keep track of your accomplishments."
+      }
+    }
+  },
+  "AUTH": {
+    "LOGIN": {
+      "TITLE": "Welcome Back",
+      "SUBTITLE": "Sign in to your account to continue",
+      "EMAIL": "Email Address",
+      "EMAIL_PLACEHOLDER": "you@example.com",
+      "PASSWORD": "Password",
+      "LABEL_PASSWORD": "Password",
+      "FORGOT_PASSWORD": "Forgot password?",
+      "SUBMIT": "Sign In",
+      "NO_ACCOUNT": "Don't have an account?",
+      "SIGN_UP_NOW": "Create Account",
+      "SUCCESS_MSG": "Welcome back! You have successfully logged in.",
+      "SUCCESS_TITLE": "Login Successful",
+      "ERROR_TITLE": "Login Failed",
+      "ERRORS": {
+        "EMAIL_REQUIRED": "Email is required",
+        "EMAIL_INVALID": "Invalid email format",
+        "PASSWORD_REQUIRED": "Password is required",
+        "PASSWORD_MINLENGTH": "Password must be at least 6 characters",
+        "INVALID_CREDENTIALS": "Invalid credentials. Please try again.",
+        "PASSWORD_MIN": "Password must be at least 6 characters",
+        "ORG_REQUIRED": "Organization name is required for admin accounts"
+      }
+    },
+    "FORGOT_PW": {
+      "TITLE": "Reset Your Password",
+      "SUBTITLE": "Enter your email address and we'll send you a link to reset your password.",
+      "LABEL_EMAIL": "Email Address",
+      "ERROR_EMAIL": "Valid email is required",
+      "SUBMIT": "Send Reset Link",
+      "BACK": "Back to Sign In"
+    },
+    "RESET_PW": {
+      "TITLE": "Create New Password",
+      "SUBTITLE": "Your new password must be different from previously used passwords.",
+      "LABEL_NEW": "New Password",
+      "LABEL_CONFIRM": "Confirm Password",
+      "ERROR_CONFIRM": "Confirm password is required",
+      "ERROR_MATCH": "Passwords do not match",
+      "SUBMIT": "Reset Password"
+    }
+  },
+  "NAV": {
+    "TOGGLE_LANG": "Change Language",
+    "DASHBOARD": "Dashboard",
+    "MY_TASKS": "My Tasks",
+    "PROFILE": "Profile",
+    "ORGANIZATIONS": "Organizations",
+    "USERS": "Users",
+    "NEW_TASK": "New Task",
+    "LOGOUT": "Logout",
+    "LOGIN": "Login",
+    "SIGN_UP": "Sign Up",
+    "HOME": "Home"
+  },
+  "FOOTER": {
+    "DESC": "A simple yet powerful application to manage your tasks efficiently. Built with Angular, Node.js, Express, and MongoDB.",
+    "QUICK_LINKS": "Quick Links",
+    "CONNECT": "Connect",
+    "RIGHTS": "All rights reserved.",
+    "CREATED_BY": "Created by",
+    "LOADING_VISITORS": "Loading visitor count...",
+    "UNIQUE_VISITORS": "Unique Visitors"
+  },
+  "DASHBOARD": {
+    "TITLE": "Executive Dashboard",
+    "SUBTITLE": "Organizational Overview & Progress",
+    "UNAVAILABLE": "Dashboard unavailable",
+    "STATS": {
+      "TOTAL": "Total Tasks",
+      "COMPLETED": "Finished",
+      "URGENT": "Urgent",
+      "IN_QUEUE": "In Queue",
+      "ACTIVE_LABEL": "+Active",
+      "CRITICAL_LABEL": "Critical"
+    },
+    "DISTRIBUTION": {
+      "TITLE": "Task Distribution",
+      "OVERALL_PROGRESS": "Overall Completion"
+    },
+    "WORKSPACE": {
+      "TITLE": "Go to Workspace",
+      "DESC": "Access your task lists and start collaborating with your team today.",
+      "VIEW_ALL": "VIEW ALL TASKS"
+    },
+    "SYSTEM_OVERVIEW": "System Overview"
+  },
+  "USERS": {
+    "TITLE": "User Management",
+    "SUBTITLE": "View and manage all users in your organization.",
+    "LOADING": "Loading users...",
+    "EMPTY": {
+      "TITLE": "No users found",
+      "DESC": "There are no users to display at this time."
+    },
+    "LIST_HEADER": "Registered Users",
+    "PAGINATION": {
+      "PAGE_OF": "Showing page {{page}} of {{total}}",
+      "SHOWING_RANGE": "Showing {{start}}-{{end}} of {{total}} users",
+      "PREVIOUS": "Previous",
+      "NEXT": "Next"
+    },
+    "TABLE": {
+      "NAME": "Name",
+      "EMAIL": "Email",
+      "ROLE": "Role",
+      "JOIN_DATE": "Join Date",
+      "ORGANIZATION": "Organization"
+    }
+  },
+  "PROFILE": {
+    "TITLE": "My Profile",
+    "SUBTITLE": "Manage your personal information and account settings.",
+    "FIELDS": {
+      "NAME": "Full Name",
+      "EMAIL": "Email Address",
+      "POSITION": "Position",
+      "ORGANIZATION": "Organization",
+      "CREATED_AT": "Account Created"
+    },
+    "LATEST_ACTIVITY": "Latest Activities",
+    "UPDATE_BTN": "Update Profile"
+  },
+  "ORGANIZATIONS": {
+    "TITLE": "My Organizations",
+    "LOADING": "Loading organizations...",
+    "EMPTY": {
+      "TITLE": "No organizations found",
+      "DESC": "Create your first organization to get started.",
+      "BTN": "Create Organization"
+    },
+    "LIST": {
+      "MEMBERS": "{{count}} members",
+      "NO_DESC": "No description provided",
+      "CREATED_BY": "Created by",
+      "VIEW_DETAILS": "View Details"
+    },
+    "PAGINATION": {
+      "SHOWING": "Showing {{start}}-{{end}} of {{total}} organizations",
+      "PREV": "Previous",
+      "NEXT": "Next"
+    },
+    "FORM": {
+      "BACK": "Back to Organizations",
+      "CREATE_TITLE": "Create New Organization",
+      "EDIT_TITLE": "Edit Organization",
+      "LABEL_NAME": "Organization Name",
+      "LABEL_DESC": "Description",
+      "LABEL_LOGO": "Logo URL",
+      "PLACEHOLDER_DESC": "Describe your organization (optional)",
+      "PLACEHOLDER_LOGO": "https://example.com/logo.png (optional)",
+      "SUBMIT_CREATE": "Create Organization",
+      "SUBMIT_CREATING": "Creating...",
+      "SUBMIT_EDIT": "Save Changes",
+      "ERRORS": {
+        "NAME_REQUIRED": "Name is required",
+        "NAME_MIN": "Name must be at least 3 characters"
+      }
+    },
+    "DETAIL": {
+      "TITLE": "Organization Details",
+      "LOADING": "Loading organization details...",
+      "MEMBERS_TITLE": "Members",
+      "ROLE": "Role",
+      "JOINED": "Joined",
+      "EDIT": "Edit",
+      "CANCEL_EDIT": "Cancel Edit",
+      "SAVE": "Save Changes",
+      "ADD_MEMBER": "Add Member",
+      "SELECT_USER": "Select User",
+      "SELECT_USER_OPT": "-- Select a User --",
+      "NO_USERS": "No available users to add",
+      "CANCEL": "Cancel"
+    }
+  }
+}

@@ -6,10 +6,12 @@ import { NgClass, DatePipe } from '@angular/common';
 import { AuthService } from '../../../services/auth.service';
 import { FormsModule } from '@angular/forms';
 import { DeadlineAlertPipe } from '../../../shared/pipes/deadline-alert.pipe';
+import { SubtaskProgressPipe } from '../../../shared/pipes/subtask-progress.pipe';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-task-list',
-    imports: [RouterLink, NgClass, DatePipe, DeadlineAlertPipe, FormsModule],
+    imports: [RouterLink, NgClass, DatePipe, DeadlineAlertPipe, SubtaskProgressPipe, FormsModule, TranslateModule],
     templateUrl: './task-list.component.html',
 })
 export class TaskListComponent implements OnInit {
@@ -227,11 +229,5 @@ export class TaskListComponent implements OnInit {
 
   isSuperAdmin() {
     return this.auth.isSuper();
-  }
-
-  getSubtaskProgress(task: Task): string {
-    if (!task.subtasks || task.subtasks.length === 0) return '';
-    const completed = task.subtasks.filter(s => s.completed).length;
-    return `${completed}/${task.subtasks.length} subtasks`;
   }
 }

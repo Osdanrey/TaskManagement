@@ -1,7 +1,7 @@
 <div class="container mx-auto px-4 py-8 max-w-5xl">
     <div class="mb-6">
         <a routerLink="/organizations" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-            <i class="fas fa-arrow-left mr-2"></i> Back to Organizations
+            <i class="fas fa-arrow-left mr-2"></i> {{ 'ORGANIZATIONS.FORM.BACK' | translate }}
         </a>
     </div>
 
@@ -10,7 +10,7 @@
         <div class="bg-white rounded-xl shadow-md p-12 flex justify-center">
             <div class="flex flex-col items-center">
                 <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-                <p class="mt-4 text-gray-600">Loading organization details...</p>
+                <p class="mt-4 text-gray-600">{{ 'ORGANIZATIONS.DETAIL.LOADING' | translate }}</p>
             </div>
         </div>
     }
@@ -23,10 +23,10 @@
                     <i class="fas fa-exclamation-triangle"></i>
                 </div>
                 <div class="ml-3">
-                    <p class="font-medium">Error</p>
+                    <p class="font-medium">{{ 'TASKS.DETAIL.ERROR' | translate }}</p>
                     <p>{{ error() }}</p>
                     <button (click)="loadOrganizationDetails(organization()?._id || '')" class="text-blue-600 hover:underline mt-2">
-                        Try again
+                        {{ 'TASKS.STATUS.TRY_AGAIN' | translate }}
                     </button>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                             class="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 mr-3"
                         >
                             <i class="fas" [ngClass]="editMode() ? 'fa-times' : 'fa-edit'"></i>
-                            <span class="ml-2">{{ editMode() ? 'Cancel Edit' : 'Edit' }}</span>
+                            <span class="ml-2">{{ (editMode() ? 'ORGANIZATIONS.DETAIL.CANCEL_EDIT' : 'ORGANIZATIONS.DETAIL.EDIT') | translate }}</span>
                         </button>
                     }
                 </div>
@@ -72,11 +72,11 @@
             <div class="mt-16 p-8">
                 @if(!editMode()) {
                     <h1 class="text-3xl font-bold text-gray-900">{{ organization()?.name }}</h1>
-                    <p class="mt-4 text-gray-600">{{ organization()?.description || 'No description provided.' }}</p>
+                    <p class="mt-4 text-gray-600">{{ organization()?.description || ('ORGANIZATIONS.LIST.NO_DESC' | translate) }}</p>
                     
                     <div class="mt-8 flex items-center text-gray-500 text-sm">
                         <i class="fas fa-user-circle mr-2"></i>
-                        <span>Created by {{ organization()?.owner?.email }}</span>
+                        <span>{{ 'ORGANIZATIONS.LIST.CREATED_BY' | translate }} {{ organization()?.owner?.email }}</span>
                         <span class="mx-2">•</span>
                         <i class="far fa-calendar-alt mr-2"></i>
                         <span>{{ organization()?.createdAt | date:'mediumDate' }}</span>
@@ -86,7 +86,7 @@
                         <div class="space-y-6">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-1">
-                                    Organization Name <span class="text-red-500">*</span>
+                                    {{ 'ORGANIZATIONS.FORM.LABEL_NAME' | translate }} <span class="text-red-500">*</span>
                                 </label>
                                 <input 
                                     type="text" 
@@ -97,7 +97,7 @@
                             </div>
                             
                             <div>
-                                <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Description</label>
+                                <label for="description" class="block text-sm font-medium text-gray-700 mb-1">{{ 'ORGANIZATIONS.FORM.LABEL_DESC' | translate }}</label>
                                 <textarea 
                                     id="description" 
                                     formControlName="description"
@@ -113,7 +113,7 @@
                                     [disabled]="organizationForm.invalid"
                                     class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
                                 >
-                                    <i class="fas fa-save mr-2"></i> Save Changes
+                                    <i class="fas fa-save mr-2"></i> {{ 'ORGANIZATIONS.DETAIL.SAVE' | translate }}
                                 </button>
                             </div>
                         </div>
@@ -123,7 +123,7 @@
                 <!-- Members Section -->
                 <div class="mt-12">
                     <div class="flex justify-between items-center mb-4">
-                        <h2 class="text-xl font-semibold text-gray-800">Members ({{ organization()?.members?.length }})</h2>
+                        <h2 class="text-xl font-semibold text-gray-800">{{ 'ORGANIZATIONS.DETAIL.MEMBERS_TITLE' | translate }} ({{ organization()?.members?.length }})</h2>
                     </div>
                     
                     <div class="bg-gray-50 rounded-lg overflow-hidden border border-gray-200">
@@ -131,9 +131,9 @@
                             <table class="min-w-full divide-y divide-gray-200">
                                 <thead class="bg-gray-50">
                                     <tr>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
-                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Joined</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{{ 'USERS.TABLE.NAME' | translate }}</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{{ 'ORGANIZATIONS.DETAIL.ROLE' | translate }}</th>
+                                        <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{{ 'ORGANIZATIONS.DETAIL.JOINED' | translate }}</th>
                                     </tr>
                                 </thead>
                                 <tbody class="bg-white divide-y divide-gray-200">
@@ -183,7 +183,7 @@
             <div class="fixed inset-0 bg-gray-500 bg-opacity-75 flex items-center justify-center z-50">
                 <div class="bg-white rounded-lg max-w-md w-full mx-4 shadow-xl">
                     <div class="px-6 py-4 border-b border-gray-200">
-                        <h3 class="text-lg font-medium text-gray-900">Add Member</h3>
+                        <h3 class="text-lg font-medium text-gray-900">{{ 'ORGANIZATIONS.DETAIL.ADD_MEMBER' | translate }}</h3>
                     </div>
                     
                     <form [formGroup]="addMemberForm" (ngSubmit)="addMember()">
@@ -194,17 +194,17 @@
                                 </div>
                             } @else if(availableUsers().length === 0) {
                                 <div class="text-center py-4 text-gray-500">
-                                    No available users to add
+                                    {{ 'ORGANIZATIONS.DETAIL.NO_USERS' | translate }}
                                 </div>
                             } @else {
                                 <div class="mb-4">
-                                    <label for="userId" class="block text-sm font-medium text-gray-700 mb-1">Select User</label>
+                                    <label for="userId" class="block text-sm font-medium text-gray-700 mb-1">{{ 'ORGANIZATIONS.DETAIL.SELECT_USER' | translate }}</label>
                                     <select 
                                         id="userId" 
                                         formControlName="userId"
                                         class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                                     >
-                                        <option value="" disabled selected>-- Select a User --</option>
+                                        <option value="" disabled selected>{{ 'ORGANIZATIONS.DETAIL.SELECT_USER_OPT' | translate }}</option>
                                         @for (user of availableUsers(); track user._id) {
                                             <option [value]="user._id">{{ user.email }}</option>
                                         }
@@ -212,7 +212,7 @@
                                 </div>
                                 
                                 <div class="mb-4">
-                                    <label for="role" class="block text-sm font-medium text-gray-700 mb-1">Role</label>
+                                    <label for="role" class="block text-sm font-medium text-gray-700 mb-1">{{ 'ORGANIZATIONS.DETAIL.ROLE' | translate }}</label>
                                     <select 
                                         id="role" 
                                         formControlName="role"
@@ -231,14 +231,14 @@
                                 (click)="closeAddMemberModal()"
                                 class="px-4 py-2 border border-gray-300 rounded-md text-gray-700 hover:bg-gray-100"
                             >
-                                Cancel
+                                {{ 'ORGANIZATIONS.DETAIL.CANCEL' | translate }}
                             </button>
                             <button 
                                 type="submit"
                                 [disabled]="addMemberForm.invalid || loadingUsers() || availableUsers().length === 0"
                                 class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md disabled:opacity-50 disabled:cursor-not-allowed"
                             >
-                                <i class="fas fa-user-plus mr-1"></i> Add Member
+                                <i class="fas fa-user-plus mr-1"></i> {{ 'ORGANIZATIONS.DETAIL.ADD_MEMBER' | translate }}
                             </button>
                         </div>
                     </form>
@@ -247,3 +247,4 @@
         }
     }
 </div>
+v>

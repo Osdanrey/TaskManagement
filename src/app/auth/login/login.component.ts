@@ -10,10 +10,12 @@ import {
 import { Router, RouterLink } from '@angular/router';
 import { NgClass } from '@angular/common';
 import { NotificationService } from '../../services/notification.service';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-login',
-    imports: [ReactiveFormsModule, RouterLink, NgClass],
+    standalone: true,
+    imports: [ReactiveFormsModule, NgClass, RouterLink, TranslateModule],
     templateUrl: './login.component.html',
 })
 export class LoginComponent {
@@ -27,6 +29,7 @@ export class LoginComponent {
   private authService = inject(AuthService);
   private fb = inject(FormBuilder);
   private notificationService = inject(NotificationService);
+  private translate = inject(TranslateService);
 
   constructor() {
     this.loginForm = this.fb.group({
@@ -68,15 +71,20 @@ export class LoginComponent {
 
   private handleLoginSuccess(): void {
     this.setLoadingState(false);
-    this.notificationService.success('Welcome back! You have successfully logged in.', 'Login Successful');
+    this.translate.get(['AUTH.LOGIN.SUCCESS_MSG', 'AUTH.LOGIN.SUCCESS_TITLE']).subscribe(translations => {
+      this.notificationService.success(translations['AUTH.LOGIN.SUCCESS_MSG'], translations['AUTH.LOGIN.SUCCESS_TITLE']);
+    });
     this.router.navigate(['/tasks']);
   }
 
   private handleLoginError(err: any): void {
     this.setLoadingState(false);
     console.error(err);
-    const msg = err?.error?.message || 'Invalid credentials. Please try again.';
-    this.error.set(msg);
-    this.notificationService.error(msg, 'Login Failed');
+    const msgKey = err?.error?.messageKey || 'AUTH.LOGIN.ERRORS.INVALID_CREDENTIALS';
+    this.translate.get([msgKey, 'AUTH.LOGIN.ERROR_TITLE']).subscribe(translations => {
+      const msg = translations[msgKey] || err?.error?.message || 'Error';
+      this.error.set(msg);
+      this.notificationService.error(msg, translations['AUTH.LOGIN.ERROR_TITLE']);
+    });
   }
 }

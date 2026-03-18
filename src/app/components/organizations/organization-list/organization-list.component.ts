@@ -3,10 +3,11 @@ import { OrganizationService } from '../../../services/organization.service';
 import { Organization } from '../../../core/models/organization.model';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../../services/auth.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-organization-list',
-  imports: [RouterLink],
+  imports: [RouterLink, TranslateModule],
   templateUrl: './organization-list.component.html'
 })
 export class OrganizationListComponent implements OnInit {

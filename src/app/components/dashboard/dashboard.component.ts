@@ -1,11 +1,12 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { TaskService } from '../../services/task.service';
-import { NgClass, DecimalPipe } from '@angular/common';
+import { DatePipe, DecimalPipe, NgClass, UpperCasePipe } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-dashboard',
-  imports: [NgClass, DecimalPipe, RouterLink],
+  imports: [NgClass, DecimalPipe, RouterLink, DatePipe, UpperCasePipe, TranslateModule],
   templateUrl: './dashboard.component.html',
 })
 export class DashboardComponent implements OnInit {

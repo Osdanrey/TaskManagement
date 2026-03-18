@@ -3,10 +3,11 @@ import { UsersService } from '../../../services/users.service';
 import { User } from '../../../core/models/users.model';
 import { NgClass } from '@angular/common';
 import { AuthService } from '../../../services/auth.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-users-list',
-    imports: [NgClass],
+    imports: [NgClass, TranslateModule],
     templateUrl: './users-list.component.html',
 })
 export class UsersListComponent implements OnInit {

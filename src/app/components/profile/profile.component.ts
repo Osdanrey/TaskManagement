@@ -2,10 +2,11 @@ import { Component, OnInit, inject, signal } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { UsersService } from '../../services/users.service';
 import { DatePipe } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-profile',
-  imports: [DatePipe],
+  imports: [DatePipe, TranslateModule],
   templateUrl: './profile.component.html',
 })
 export class ProfileComponent implements OnInit {

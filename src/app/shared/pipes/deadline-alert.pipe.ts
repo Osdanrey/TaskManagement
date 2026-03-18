@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 export interface DeadlineStatus {
-  text: string;
+  key: string;
+  params?: any;
   colorClass: string;
   urgency: 'overdue' | 'urgent' | 'soon' | 'normal';
 }
@@ -21,7 +22,7 @@ export class DeadlineAlertPipe implements PipeTransform {
 
     if (diffMs < 0) {
       return {
-        text: 'OVERDUE',
+        key: 'OVERDUE',
         colorClass: 'bg-red-600 text-white',
         urgency: 'overdue'
       };
@@ -31,7 +32,8 @@ export class DeadlineAlertPipe implements PipeTransform {
       const hours = Math.floor(diffHours);
       const mins = Math.floor((diffHours % 1) * 60);
       return {
-        text: `DUE IN ${hours > 0 ? hours + 'h' : ''} ${mins}m`,
+        key: 'DUE_IN_HM',
+        params: { hours, mins },
         colorClass: 'bg-orange-500 text-white animate-pulse',
         urgency: 'urgent'
       };
@@ -40,14 +42,15 @@ export class DeadlineAlertPipe implements PipeTransform {
     if (diffHours < 72) {
       const days = Math.floor(diffHours / 24);
       return {
-        text: `DUE IN ${days}d`,
+        key: 'DUE_IN_DAYS',
+        params: { days },
         colorClass: 'bg-yellow-400 text-gray-900',
         urgency: 'soon'
       };
     }
 
     return {
-      text: 'ON TRACK',
+      key: 'ON_TRACK',
       colorClass: 'bg-green-100 text-green-700',
       urgency: 'normal'
     };

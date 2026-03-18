@@ -1,10 +1,11 @@
 import { Component, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-footer',
-    imports: [RouterLink],
+    imports: [RouterLink, TranslateModule],
     templateUrl: './footer.component.html',
 })
 export class FooterComponent {

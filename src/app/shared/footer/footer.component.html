@@ -8,22 +8,22 @@
                     <h2 class="text-xl font-bold">Task Management App</h2>
                 </div>
                 <p class="text-gray-200 text-sm">
-                    A simple yet powerful application to manage your tasks efficiently. Built with Angular, Node.js, Express, and MongoDB.
+                    {{ 'FOOTER.DESC' | translate }}
                 </p>
             </div>
             
             <!-- Quick Links -->
             <div class="mb-6 md:mb-0">
-                <h3 class="text-lg font-bold mb-3 border-b border-blue-500 pb-1">Quick Links</h3>
+                <h3 class="text-lg font-bold mb-3 border-b border-blue-500 pb-1">{{ 'FOOTER.QUICK_LINKS' | translate }}</h3>
                 <ul class="space-y-2">
-                    <li><a routerLink="/" class="text-gray-200 hover:text-white transition-colors">Home</a></li>
+                    <li><a routerLink="/" class="text-gray-200 hover:text-white transition-colors">{{ 'NAV.HOME' | translate }}</a></li>
                     @if (!isLoggedIn()) {
-                        <li><a routerLink="/login" class="text-gray-200 hover:text-white transition-colors">Login</a></li>
-                        <li><a routerLink="/register" class="text-gray-200 hover:text-white transition-colors">Register</a></li>
+                        <li><a routerLink="/login" class="text-gray-200 hover:text-white transition-colors">{{ 'NAV.LOGIN' | translate }}</a></li>
+                        <li><a routerLink="/register" class="text-gray-200 hover:text-white transition-colors">{{ 'NAV.SIGN_UP' | translate }}</a></li>
                     } @else {
-                        <li><a routerLink="/tasks" class="text-gray-200 hover:text-white transition-colors">My Tasks</a></li>
+                        <li><a routerLink="/tasks" class="text-gray-200 hover:text-white transition-colors">{{ 'NAV.MY_TASKS' | translate }}</a></li>
                         @if (isAdmin()) {
-                            <li><a routerLink="/users" class="text-gray-200 hover:text-white transition-colors">Users</a></li>
+                            <li><a routerLink="/users" class="text-gray-200 hover:text-white transition-colors">{{ 'NAV.USERS' | translate }}</a></li>
                         }
                     }
                 </ul>
@@ -31,7 +31,7 @@
             
             <!-- Contact -->
             <div>
-                <h3 class="text-lg font-bold mb-3 border-b border-blue-500 pb-1">Connect</h3>
+                <h3 class="text-lg font-bold mb-3 border-b border-blue-500 pb-1">{{ 'FOOTER.CONNECT' | translate }}</h3>
                 <div class="flex space-x-4 text-xl">
                     <a href="https://github.com/manthanank" target="_blank" rel="noopener" class="text-gray-200 hover:text-white transition-colors">
                         <i class="fab fa-github"></i>
@@ -47,19 +47,19 @@
         </div>
         
         <div class="mt-8 pt-4 border-t border-blue-500 text-center">
-            <p class="text-sm text-gray-200">&copy; {{currentYear}} Task Management App. All rights reserved.</p>
-            <p class="text-xs text-gray-300 mt-1">Created by <a href="https://github.com/manthanank" target="_blank" rel="noopener" class="text-blue-300 hover:underline">Manthan Ankolekar</a></p>
+            <p class="text-sm text-gray-200">&copy; {{currentYear}} Task Management App. {{ 'FOOTER.RIGHTS' | translate }}</p>
+            <p class="text-xs text-gray-300 mt-1">{{ 'FOOTER.CREATED_BY' | translate }} <a href="https://github.com/manthanank" target="_blank" rel="noopener" class="text-blue-300 hover:underline">Manthan Ankolekar</a></p>
             <div class="mt-4 text-center">
                 @if (isVisitorCountLoading()) {
-                    <span class="text-xs text-gray-300">Loading visitor count...</span>
+                    <span class="text-xs text-gray-300">{{ 'FOOTER.LOADING_VISITORS' | translate }}</span>
                 }
                 @else if (visitorCountError()) {
                     <span class="text-xs text-red-300">{{ visitorCountError() }}</span>
                 }
                 @else {
-                    <span class="text-xs text-gray-300">Unique Visitors: {{ visitorCount() }}</span>
+                    <span class="text-xs text-gray-300">{{ 'FOOTER.UNIQUE_VISITORS' | translate }}: {{ visitorCount() }}</span>
                 }
             </div>
         </div>
     </div>
-</footer>
+</footer>

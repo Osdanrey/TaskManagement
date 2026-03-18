@@ -1,18 +1,20 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Router, RouterLink } from '@angular/router';
+import { Router, RouterLink, ActivatedRoute } from '@angular/router';
 import { OrganizationService } from '../../../services/organization.service';
 import { NgClass } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-organization-form',
-  imports: [ReactiveFormsModule, RouterLink, NgClass],
+  imports: [ReactiveFormsModule, NgClass, RouterLink, TranslateModule],
   templateUrl: './organization-form.component.html'
 })
 export class OrganizationFormComponent {
   organizationForm: FormGroup;
   error = '';
   loading = false;
+  isEditMode = false;
   
   private organizationService = inject(OrganizationService);
   private router = inject(Router);

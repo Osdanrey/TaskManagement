@@ -14,9 +14,11 @@ import { NgClass } from '@angular/common';
 import { UsersService } from '../../../services/users.service';
 import { NotificationService } from '../../../services/notification.service';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 @Component({
     selector: 'app-task-form',
-    imports: [ReactiveFormsModule, NgClass, RouterLink],
+    imports: [ReactiveFormsModule, NgClass, RouterLink, TranslateModule],
     templateUrl: './task-form.component.html',
 })
 export class TaskFormComponent {

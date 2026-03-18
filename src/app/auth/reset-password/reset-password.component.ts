@@ -8,10 +8,11 @@ import {
 import { RouterLink, ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { NgClass } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-reset-password',
-    imports: [ReactiveFormsModule, RouterLink, NgClass],
+    imports: [ReactiveFormsModule, RouterLink, NgClass, TranslateModule],
     templateUrl: './reset-password.component.html',
 })
 export class ResetPasswordComponent implements OnInit {

@@ -1,16 +1,16 @@
 <div class="container mx-auto px-4 py-8 max-w-3xl">
     <div class="mb-6">
         <a [routerLink]="['/tasks', taskId]" class="text-blue-600 hover:text-blue-800 inline-flex items-center">
-            <i class="fas fa-arrow-left mr-2"></i> Back to Task
+            <i class="fas fa-arrow-left mr-2"></i> {{ 'TASKS.DETAIL.BACK_TO_TASK' | translate }}
         </a>
     </div>
 
     <div class="bg-white rounded-xl shadow-md overflow-hidden">
         <div class="bg-gradient-to-r from-blue-500 to-blue-700 p-6">
             <h2 class="text-2xl font-bold text-white flex items-center">
-                <i class="fas fa-edit mr-2"></i> Edit Task
+                <i class="fas fa-edit mr-2"></i> {{ 'TASKS.FORM.EDIT_TITLE' | translate }}
             </h2>
-            <p class="text-blue-100 mt-1">Update task details</p>
+            <p class="text-blue-100 mt-1">{{ 'TASKS.FORM.EDIT_SUBTITLE' | translate }}</p>
         </div>
         
         <!-- Loading State -->
@@ -18,7 +18,7 @@
             <div class="flex items-center justify-center p-12">
                 <div class="flex flex-col items-center">
                     <div class="w-16 h-16 border-4 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
-                    <p class="mt-4 text-gray-600">Loading task details...</p>
+                    <p class="mt-4 text-gray-600">{{ 'TASKS.DETAIL.LOADING' | translate }}</p>
                 </div>
             </div>
         }
@@ -32,9 +32,9 @@
                             <i class="fas fa-exclamation-circle mt-1"></i>
                         </div>
                         <div class="ml-3">
-                            <p class="font-medium">Error</p>
+                            <p class="font-medium">{{ 'TASKS.DETAIL.ERROR' | translate }}</p>
                             <p class="text-sm">{{ error }}</p>
-                            <button class="text-sm underline mt-2" [routerLink]="['/tasks']">Return to tasks</button>
+                            <button class="text-sm underline mt-2" [routerLink]="['/tasks']">{{ 'TASKS.DETAIL.BACK' | translate }}</button>
                         </div>
                     </div>
                 </div>
@@ -47,21 +47,21 @@
                 <form [formGroup]="taskForm" (ngSubmit)="updateTask()" class="space-y-6">
                     <!-- Title -->
                     <div>
-                        <label for="title" class="block text-sm font-medium text-gray-700 mb-1">Task Title <span class="text-red-500">*</span></label>
+                        <label for="title" class="block text-sm font-medium text-gray-700 mb-1">{{ 'TASKS.FORM.LABEL_TITLE' | translate }} <span class="text-red-500">*</span></label>
                         <input 
                             type="text" 
                             id="title"
                             formControlName="title" 
-                            placeholder="Enter a descriptive title" 
+                            [placeholder]="'TASKS.FORM.PLACEHOLDER_TITLE' | translate" 
                             class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         >
                         @if (taskForm.get('title')?.invalid && (taskForm.get('title')?.touched || taskForm.get('title')?.dirty)) {
                             <div class="mt-1 text-sm text-red-600">
                                 @if (taskForm.get('title')?.errors?.['required']) {
-                                    <p><i class="fas fa-info-circle mr-1"></i>Title is required</p>
+                                    <p><i class="fas fa-info-circle mr-1"></i>{{ 'TASKS.FORM.ERRORS.TITLE_REQUIRED' | translate }}</p>
                                 }
                                 @if (taskForm.get('title')?.errors?.['minlength']) {
-                                    <p><i class="fas fa-info-circle mr-1"></i>Title must be at least 3 characters</p>
+                                    <p><i class="fas fa-info-circle mr-1"></i>{{ 'TASKS.FORM.ERRORS.TITLE_MINLENGTH' | translate }}</p>
                                 }
                             </div>
                         }
@@ -69,21 +69,21 @@
                     
                     <!-- Description -->
                     <div>
-                        <label for="description" class="block text-sm font-medium text-gray-700 mb-1">Description <span class="text-red-500">*</span></label>
+                        <label for="description" class="block text-sm font-medium text-gray-700 mb-1">{{ 'TASKS.FORM.LABEL_DESCRIPTION' | translate }} <span class="text-red-500">*</span></label>
                         <textarea 
                             id="description"
                             formControlName="description" 
                             rows="4" 
-                            placeholder="Provide a detailed description of the task" 
+                            [placeholder]="'TASKS.FORM.PLACEHOLDER_DESCRIPTION' | translate" 
                             class="w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                         ></textarea>
                         @if (taskForm.get('description')?.invalid && (taskForm.get('description')?.touched || taskForm.get('description')?.dirty)) {
                             <div class="mt-1 text-sm text-red-600">
                                 @if (taskForm.get('description')?.errors?.['required']) {
-                                    <p><i class="fas fa-info-circle mr-1"></i>Description is required</p>
+                                    <p><i class="fas fa-info-circle mr-1"></i>{{ 'TASKS.FORM.ERRORS.DESCRIPTION_REQUIRED' | translate }}</p>
                                 }
                                 @if (taskForm.get('description')?.errors?.['minlength']) {
-                                    <p><i class="fas fa-info-circle mr-1"></i>Description must be at least 3 characters</p>
+                                    <p><i class="fas fa-info-circle mr-1"></i>{{ 'TASKS.FORM.ERRORS.DESCRIPTION_MINLENGTH' | translate }}</p>
                                 }
                             </div>
                         }
@@ -92,7 +92,7 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <!-- Deadline -->
                         <div>
-                            <label for="deadline" class="block text-sm font-medium text-gray-700 mb-1">Deadline <span class="text-red-500">*</span></label>
+                            <label for="deadline" class="block text-sm font-medium text-gray-700 mb-1">{{ 'TASKS.FORM.LABEL_DEADLINE' | translate }} <span class="text-red-500">*</span></label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <i class="far fa-calendar-alt text-gray-400"></i>
@@ -107,7 +107,7 @@
                             @if (taskForm.get('deadline')?.invalid && (taskForm.get('deadline')?.touched || taskForm.get('deadline')?.dirty)) {
                                 <div class="mt-1 text-sm text-red-600">
                                     @if (taskForm.get('deadline')?.errors?.['required']) {
-                                        <p><i class="fas fa-info-circle mr-1"></i>Deadline is required</p>
+                                        <p><i class="fas fa-info-circle mr-1"></i>{{ 'TASKS.FORM.ERRORS.DEADLINE_REQUIRED' | translate }}</p>
                                     }
                                 </div>
                             }
@@ -115,7 +115,7 @@
                         
                         <!-- Priority -->
                         <div>
-                            <label for="priority" class="block text-sm font-medium text-gray-700 mb-1">Priority <span class="text-red-500">*</span></label>
+                            <label for="priority" class="block text-sm font-medium text-gray-700 mb-1">{{ 'TASKS.FORM.LABEL_PRIORITY' | translate }} <span class="text-red-500">*</span></label>
                             <div class="relative">
                                 <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                     <i class="fas fa-flag text-gray-400"></i>
@@ -125,10 +125,10 @@
                                     formControlName="priority" 
                                     class="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
                                 >
-                                    <option value="" disabled>Select priority</option>
-                                    <option value="Low">Low</option>
-                                    <option value="Medium">Medium</option>
-                                    <option value="High">High</option>
+                                    <option value="" disabled>{{ 'TASKS.FORM.PLACEHOLDER_PRIORITY' | translate }}</option>
+                                    <option value="Low">{{ 'TASKS.PRIORITY_LEVELS.Low' | translate }}</option>
+                                    <option value="Medium">{{ 'TASKS.PRIORITY_LEVELS.Medium' | translate }}</option>
+                                    <option value="High">{{ 'TASKS.PRIORITY_LEVELS.High' | translate }}</option>
                                 </select>
                                 <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
                                     <i class="fas fa-chevron-down text-gray-400"></i>
@@ -137,7 +137,7 @@
                             @if (taskForm.get('priority')?.invalid && (taskForm.get('priority')?.touched || taskForm.get('priority')?.dirty)) {
                                 <div class="mt-1 text-sm text-red-600">
                                     @if (taskForm.get('priority')?.errors?.['required']) {
-                                        <p><i class="fas fa-info-circle mr-1"></i>Priority is required</p>
+                                        <p><i class="fas fa-info-circle mr-1"></i>{{ 'TASKS.FORM.ERRORS.PRIORITY_REQUIRED' | translate }}</p>
                                     }
                                 </div>
                             }
@@ -146,7 +146,7 @@
                     
                     <!-- Assignee -->
                     <div>
-                        <label for="userId" class="block text-sm font-medium text-gray-700 mb-1">Assign To <span class="text-red-500">*</span></label>
+                        <label for="userId" class="block text-sm font-medium text-gray-700 mb-1">{{ 'TASKS.FORM.LABEL_ASSIGNEE' | translate }} <span class="text-red-500">*</span></label>
                         <div class="relative">
                             <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                                 <i class="fas fa-user text-gray-400"></i>
@@ -156,7 +156,7 @@
                                 formControlName="userId" 
                                 class="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none"
                             >
-                                <option value="" disabled>Select user</option>
+                                <option value="" disabled>{{ 'TASKS.FORM.PLACEHOLDER_ASSIGNEE' | translate }}</option>
                                 @for (user of users; track user._id) {
                                     <option [value]="user._id">{{ user.email }}</option>
                                 }
@@ -168,7 +168,7 @@
                         @if (taskForm.get('userId')?.invalid && (taskForm.get('userId')?.touched || taskForm.get('userId')?.dirty)) {
                             <div class="mt-1 text-sm text-red-600">
                                 @if (taskForm.get('userId')?.errors?.['required']) {
-                                    <p><i class="fas fa-info-circle mr-1"></i>Assignee is required</p>
+                                    <p><i class="fas fa-info-circle mr-1"></i>{{ 'TASKS.FORM.ERRORS.ASSIGNEE_REQUIRED' | translate }}</p>
                                 }
                             </div>
                         }
@@ -178,16 +178,16 @@
                     <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
                         <div class="flex justify-between items-center mb-4">
                             <label class="block text-sm font-semibold text-gray-700">
-                                <i class="fas fa-list-ul mr-2 text-blue-500"></i>Subtasks / Checklist
+                                <i class="fas fa-list-ul mr-2 text-blue-500"></i>{{ 'TASKS.FORM.SUBTASKS_LABEL' | translate }}
                             </label>
                             <button type="button" (click)="addSubtask()" class="inline-flex items-center px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full hover:bg-blue-200 transition-colors">
-                                <i class="fas fa-plus mr-1"></i> ADD NEW
+                                <i class="fas fa-plus mr-1"></i> {{ 'TASKS.FORM.ADD_SUBTASK' | translate }}
                             </button>
                         </div>
                         
                         <div formArrayName="subtasks" class="space-y-3">
                             @if (subtasks.controls.length === 0) {
-                                <p class="text-xs text-center text-gray-500 italic py-2">No subtasks added yet.</p>
+                                <p class="text-xs text-center text-gray-500 italic py-2">{{ 'TASKS.FORM.NO_SUBTASKS' | translate }}</p>
                             }
                             @for (subtask of subtasks.controls; track $index) {
                                 <div [formGroupName]="$index" class="flex items-center gap-3 bg-white p-3 rounded-md shadow-sm border border-gray-100 group">
@@ -198,7 +198,7 @@
                                         <input 
                                             type="text" 
                                             formControlName="title" 
-                                            placeholder="What needs to be done?" 
+                                            [placeholder]="'TASKS.FORM.PLACEHOLDER_SUBTASK' | translate" 
                                             class="w-full bg-transparent border-0 border-b border-transparent focus:border-blue-400 focus:ring-0 text-sm py-0.5 placeholder-gray-400"
                                             [ngClass]="{'line-through text-gray-400': subtask.get('completed')?.value}"
                                         >
@@ -219,11 +219,11 @@
                             [ngClass]="{'opacity-50 cursor-not-allowed': taskForm.invalid || loading}"
                         >
                             <i class="fas" [ngClass]="{'fa-save': !loading, 'fa-spinner fa-spin': loading}"></i>
-                            <span class="ml-2">{{ loading ? 'Updating...' : 'Update Task' }}</span>
+                            <span class="ml-2">{{ (loading ? 'TASKS.FORM.UPDATING' : 'TASKS.FORM.SUBMIT_UPDATE') | translate }}</span>
                         </button>
                     </div>
                 </form>
             </div>
         }
     </div>
-</div>
+</div>

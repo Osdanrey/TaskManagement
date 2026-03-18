@@ -6,11 +6,13 @@ import { DatePipe, NgClass } from '@angular/common';
 import { Location } from '@angular/common';
 import { NotificationService } from '../../../services/notification.service';
 import { DeadlineAlertPipe } from '../../../shared/pipes/deadline-alert.pipe';
+import { SubtaskProgressPipe } from '../../../shared/pipes/subtask-progress.pipe';
 import { ReplacePipe } from '../../../shared/pipes/replace.pipe';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-task-detail',
-    imports: [DatePipe, NgClass, RouterLink, DeadlineAlertPipe, ReplacePipe],
+    imports: [DatePipe, NgClass, RouterLink, DeadlineAlertPipe, SubtaskProgressPipe, ReplacePipe, TranslateModule],
     templateUrl: './task-detail.component.html',
 })
 export class TaskDetailComponent implements OnInit {

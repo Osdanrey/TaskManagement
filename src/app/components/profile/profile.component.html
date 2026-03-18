@@ -4,7 +4,7 @@
       <i class="fas fa-user-circle text-blue-500 text-5xl"></i>
     </div>
     <div>
-      <h2 class="text-3xl font-bold text-gray-800 mb-1">My Profile</h2>
+      <h2 class="text-3xl font-bold text-gray-800 mb-1">{{ 'PROFILE.TITLE' | translate }}</h2>
       <p class="text-gray-500">{{ profile()?.email }}</p>
     </div>
   </div>
@@ -20,24 +20,24 @@
   @else if (profile()) {
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
       <div>
-        <div class="text-xs text-gray-400 uppercase mb-1">Role</div>
+        <div class="text-xs text-gray-400 uppercase mb-1">{{ 'USERS.TABLE.ROLE' | translate }}</div>
         <div class="capitalize text-lg font-medium text-gray-800">{{ profile().role }}</div>
       </div>
       @if (profile().organization) {
         <div>
-          <div class="text-xs text-gray-400 uppercase mb-1">Organization</div>
+          <div class="text-xs text-gray-400 uppercase mb-1">{{ 'USERS.TABLE.ORGANIZATION' | translate }}</div>
           <div class="text-lg text-gray-800">{{ profile().organization.name }}</div>
         </div>
       }
       @if (profile().organizationRole) {
         <div>
-          <div class="text-xs text-gray-400 uppercase mb-1">Organization Role</div>
+          <div class="text-xs text-gray-400 uppercase mb-1">{{ 'PROFILE.FIELDS.POSITION' | translate }}</div>
           <div class="text-lg text-gray-800">{{ profile().organizationRole }}</div>
         </div>
       }
       @if (profile().joinedAt) {
         <div>
-          <div class="text-xs text-gray-400 uppercase mb-1">Joined</div>
+          <div class="text-xs text-gray-400 uppercase mb-1">{{ 'USERS.TABLE.JOIN_DATE' | translate }}</div>
           <div class="text-lg text-gray-800">{{ profile().joinedAt | date:'mediumDate' }}</div>
         </div>
       }

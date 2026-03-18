@@ -3,10 +3,11 @@ import { ReactiveFormsModule, FormGroup, FormControl, Validators } from '@angula
 import { RouterLink, Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { NgClass } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-forgot-password',
-    imports: [ReactiveFormsModule, RouterLink, NgClass],
+    imports: [ReactiveFormsModule, RouterLink, NgClass, TranslateModule],
     templateUrl: './forgot-password.component.html',
 })
 export class ForgotPasswordComponent implements OnInit {

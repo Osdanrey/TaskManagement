@@ -7,10 +7,11 @@ import { User } from '../../../core/models/user.model';
 import { NgClass } from '@angular/common';
 import { UsersService } from '../../../services/users.service';
 import { NotificationService } from '../../../services/notification.service';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-task-edit',
-  imports: [ReactiveFormsModule, RouterLink, NgClass],
+  imports: [ReactiveFormsModule, RouterLink, NgClass, TranslateModule],
   templateUrl: './task-edit.component.html',
 })
 export class TaskEditComponent implements OnInit {
